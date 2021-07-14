@@ -10,12 +10,16 @@ const Template = args => <Notification {...args} handleDelete={() => {}} />;
 
 export const Success = Template.bind({});
 Success.args = {
-  type: "success",
-  message: "Success!",
+  notification: {
+    type: "success",
+    message: "Success!",
+  },
 };
 
 export const Error = Template.bind({});
 Error.args = {
-  type: "error",
-  message: "Error.",
+  notification: {
+    type: "error",
+    message: "Error.",
+  },
 };
