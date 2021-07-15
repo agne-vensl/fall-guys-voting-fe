@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 
+import Logo from "../../components/Logo/Logo";
 import Form from "../../components/Form/Form";
 import Button from "../../components/button/Button";
 import StyledLink from "../../components/StyledLink/StyledLink";
@@ -41,6 +42,11 @@ const Register = () => {
 
   return (
     <>
+      <Logo
+        src="https://fallguys.com/_next/image?url=%2Fimages%2Fseason4%2Flogo-desktop.png&w=1024&q=75"
+        alt="fall-guys-logo"
+      />
+
       <Form
         handleSubmit={register}
         name="register"
@@ -69,6 +75,7 @@ const Register = () => {
             name="name"
             type="text"
             placeholder="John"
+            minlength="1"
             required
             onChange={e => (formData.name = e.target.value)}
           />
@@ -81,6 +88,7 @@ const Register = () => {
             name="email"
             type="email"
             placeholder="email@email.com"
+            minlength="3"
             required
             onChange={e => (formData.email = e.target.value)}
           />
@@ -92,6 +100,7 @@ const Register = () => {
             id="password"
             type="password"
             placeholder="password"
+            minlength="8"
             required
             onChange={e => (formData.password = e.target.value)}
           />
