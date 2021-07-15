@@ -5,9 +5,9 @@ export const Logo = styled.img`
   transform: rotate(-10deg);
 
   @media only screen and (min-width: 768px) {
-    height: 15rem;
+    height: ${props => props.height};
     margin-bottom: -10rem;
     position: relative;
-    z-index: 999;
+    z-index: 1;
   }
 `;
