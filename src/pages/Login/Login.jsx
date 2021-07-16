@@ -2,6 +2,9 @@ import React, { useState } from "react";
 import { useHistory } from "react-router";
 import axios from "axios";
 
+import logo from "../../assets/logo-desktop.png";
+import picture from "../../assets/login-page-picture.png";
+
 import Logo from "../../components/Logo/Logo";
 import Form from "../../components/Form/Form";
 import Button from "../../components/button/Button";
@@ -50,17 +53,13 @@ const Login = () => {
 
   return (
     <>
-      <Logo
-        src="https://fallguys.com/_next/image?url=%2Fimages%2Fseason4%2Flogo-desktop.png&w=1024&q=75"
-        alt="fall-guys-logo"
-      />
+      <Logo src={logo} alt="fall-guys-logo" />
 
       <Form
         handleSubmit={login}
         name="login"
         imageProps={{
-          src:
-            "https://fallguys.com/_next/image?url=%2Fimages%2Fseason4%2Fpopstar-dlc%2Fpunk-idol.png&w=1920&q=75",
+          src: picture,
           alt: "fall-guys-future",
         }}
       >
