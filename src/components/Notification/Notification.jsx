@@ -2,9 +2,12 @@ import React from "react";
 import PropTypes from "prop-types";
 import * as S from "./Notification.style";
 
+import successImg from "../../assets/notification-success.png";
+import errorImg from "../../assets/notification-success.png";
+
 const images = {
-  success: "https://fallguys-skins.com/img/skins/s1/full/rare/jacket.png",
-  error: "https://fallguys-skins.com/img/skins/s2/full/xgood_witch.png",
+  success: successImg,
+  error: errorImg,
 };
 
 const Notification = ({ notification, handleDelete }) => {
