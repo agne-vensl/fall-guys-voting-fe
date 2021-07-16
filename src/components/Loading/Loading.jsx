@@ -2,8 +2,13 @@ import React from "react";
 import PropTypes from "prop-types";
 import * as S from "./Loading.style";
 
-const Loading = ({ size, color }) => (
-  <S.CircleContainer className="sk-circle" size={size} color={color}>
+const Loading = ({ size, margin, color }) => (
+  <S.CircleContainer
+    className="sk-circle"
+    margin={margin}
+    size={size}
+    color={color}
+  >
     <div className="sk-circle1 sk-child"></div>
     <div className="sk-circle2 sk-child"></div>
     <div className="sk-circle3 sk-child"></div>
@@ -21,11 +26,13 @@ const Loading = ({ size, color }) => (
 
 Loading.propTypes = {
   size: PropTypes.string,
+  margin: PropTypes.string,
   color: PropTypes.oneOf(["primary", "inherit"]),
 };
 
 Loading.defaultProps = {
   size: "2.5rem",
+  margin: "6.25rem",
   color: "primary",
 };
 

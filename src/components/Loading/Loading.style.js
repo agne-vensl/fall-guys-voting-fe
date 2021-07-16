@@ -7,7 +7,7 @@ const colors = {
 
 export const CircleContainer = styled.div`
   &.sk-circle {
-    margin: 6.25rem auto;
+    margin: ${props => props.margin} auto;
     width: ${props => props.size};
     height: ${props => props.size};
     position: relative;
