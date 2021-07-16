@@ -2,8 +2,8 @@ import styled from "styled-components";
 
 export const FormContainer = styled.div`
   background-color: #00000078;
-  border-radius: 20px;
-  box-shadow: rgb(0 0 0 / 22%) 0px 10px 10px -8px;
+  border-radius: 1.25em;
+  box-shadow: rgb(0 0 0 / 22%) 0 0.625em 0.625em -0.5em;
   margin: 0.2rem;
   margin-top: -6rem;
   padding: 5rem 1rem;
@@ -33,8 +33,8 @@ export const Form = styled.form`
   input {
     background-color: #742c8e;
     border: 0;
-    border-radius: 5px;
-    box-shadow: rgb(0 0 0 / 22%) 5px 10px 10px -8px;
+    border-radius: 0.3125em;
+    box-shadow: rgb(0 0 0 / 22%) 0.3125em 0.625em 0.625em -0.5em;
     color: #eee;
 
     outline: 0;

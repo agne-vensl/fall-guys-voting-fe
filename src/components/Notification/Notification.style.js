@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Notification = styled.div`
   background-color: #00000061;
-  border-radius: 10px;
+  border-radius: 0.625rem;
   color: #eee;
   line-height: 1.5rem;
   margin-bottom: 1.5rem;

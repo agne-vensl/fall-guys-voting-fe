@@ -9,8 +9,8 @@ const colors = {
 
 export const Button = styled.button`
   background-color: transparent;
-  border: 2px solid ${props => colors[props.color]};
-  border-radius: 5px;
+  border: 0.125rem solid ${props => colors[props.color]};
+  border-radius: 0.3125em;
   box-shadow: 0 0 0.7em ${props => colors[props.color]};
   cursor: pointer;
   color: ${props => colors[props.color]};

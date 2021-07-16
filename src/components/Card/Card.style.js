@@ -4,8 +4,8 @@ export const Card = styled.div`
   display: flex;
   flex-direction: column;
   background-color: #00000078;
-  border-radius: 20px;
-  box-shadow: rgb(0 0 0 / 22%) 0px 10px 10px -8px;
+  border-radius: 1.25em;
+  box-shadow: rgb(0 0 0 / 22%) 0 0.625em 0.625em -0.5em;
   padding: 1rem;
   width: 14.5rem;
   transition: transform 0.2s ease-in-out;
@@ -26,13 +26,13 @@ export const SpaceBetween = styled.div`
 export const ImageContainer = styled.div`
   background-color: #923cb5;
   background: radial-gradient(#9e41c0, #2f0a3d 90%);
-  border: 4px solid #fff;
-  border-radius: 20px;
+  border: 0.25em solid #fff;
+  border-radius: 1.25em;
   display: flex;
   align-items: flex-start;
   justify-content: center;
-  height: 12.5rem;
-  width: 12.5rem;
+  height: 12.5em;
+  width: 12.5em;
   margin: 0 auto;
 `;
 
@@ -82,7 +82,7 @@ export const Score = styled.div`
 
 export const AlreadyVoted = styled.div`
   color: #fff;
-  height: 49.59px;
+  height: 3.1rem;
   line-height: 1.5rem;
   margin-top: 1rem;
   text-align: center;

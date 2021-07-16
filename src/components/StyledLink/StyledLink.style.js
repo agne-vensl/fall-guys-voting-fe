@@ -10,11 +10,11 @@ export const StyledLink = styled(NavLink)`
   text-transform: uppercase;
 
   &:hover {
-    border-bottom: 2px solid #fff;
+    border-bottom: 0.125rem solid #fff;
   }
 
   &.active:hover {
-    border-bottom: 2px solid #00d4f9;
+    border-bottom: 0.125rem solid #00d4f9;
   }
 
   &.active {
