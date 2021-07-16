@@ -11,11 +11,14 @@ import Notification from "../../components/Notification/Notification";
 const Login = () => {
   const [formData] = useState({ email: "", password: "" });
   const [notification, setNotification] = useState({});
+  const [buttonLoading, setButtonLoading] = useState(false);
 
   const history = useHistory();
 
   const login = e => {
     e.preventDefault();
+
+    setButtonLoading(true);
 
     axios
       .post(`${process.env.REACT_APP_BASE_URL}/auth/login`, {
@@ -27,6 +30,8 @@ const Login = () => {
         history.push("/");
       })
       .catch(err => {
+        setButtonLoading(false);
+
         if (err.response) {
           return setNotification({
             type: "error",
@@ -95,7 +100,7 @@ const Login = () => {
           />
         </div>
 
-        <Button type="submit" text="Login" />
+        <Button type="submit" text="Login" loading={buttonLoading} />
       </Form>
     </>
   );

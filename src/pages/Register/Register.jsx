@@ -10,9 +10,12 @@ import Notification from "../../components/Notification/Notification";
 const Register = () => {
   const [formData] = useState({ name: "", email: "", password: "" });
   const [notification, setNotification] = useState({});
+  const [buttonLoading, setButtonLoading] = useState(false);
 
   const register = e => {
     e.preventDefault();
+
+    setButtonLoading(true);
 
     axios
       .post(`${process.env.REACT_APP_BASE_URL}/auth/register`, {
@@ -37,6 +40,7 @@ const Register = () => {
       })
       .finally(() => {
         e.target.elements.password.value = "";
+        setButtonLoading(false);
       });
   };
 
@@ -106,7 +110,7 @@ const Register = () => {
           />
         </div>
 
-        <Button type="submit" text="Register" />
+        <Button type="submit" text="Register" loading={buttonLoading} />
       </Form>
     </>
   );
