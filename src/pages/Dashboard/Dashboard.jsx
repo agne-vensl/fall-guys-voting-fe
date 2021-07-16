@@ -5,13 +5,17 @@ import Hero from "../../components/Hero/Hero";
 import CardsContainer from "../../components/CardsContainer/CardsContainer";
 import Notification from "../../components/Notification/Notification";
 import Header from "../../components/Header/Header";
+import Loading from "../../components/Loading/Loading";
 
 const Dashboard = () => {
   const [skins, setSkins] = useState([]);
   const [notification, setNotification] = useState({});
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     const token = localStorage.getItem("token");
+
+    setLoading(true);
 
     axios
       .post(
@@ -37,7 +41,8 @@ const Dashboard = () => {
           type: "error",
           message: "Cannot connect to server. Please try again later",
         });
-      });
+      })
+      .finally(() => setLoading(false));
   }, []);
 
   const updateScore = (id, score) => {
@@ -90,18 +95,20 @@ const Dashboard = () => {
     <>
       <Header />
       <Hero title="Dashboard" />
-
       <div className="container">
         <Notification
           notification={notification}
           handleDelete={setNotification}
         />
       </div>
-
-      <CardsContainer
-        data={skins}
-        handleClicks={{ add: addPoint, remove: removePoint }}
-      />
+      {loading ? (
+        <Loading color="primary" />
+      ) : (
+        <CardsContainer
+          data={skins}
+          handleClicks={{ add: addPoint, remove: removePoint }}
+        />
+      )}
     </>
   );
 };
