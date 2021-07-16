@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import axios from "axios";
 
+import logo from "../../assets/logo-desktop.png";
+import picture from "../../assets/register-page-picture.png";
+
 import Logo from "../../components/Logo/Logo";
 import Form from "../../components/Form/Form";
 import Button from "../../components/button/Button";
@@ -46,17 +49,13 @@ const Register = () => {
 
   return (
     <>
-      <Logo
-        src="https://fallguys.com/_next/image?url=%2Fimages%2Fseason4%2Flogo-desktop.png&w=1024&q=75"
-        alt="fall-guys-logo"
-      />
+      <Logo src={logo} alt="fall-guys-logo" />
 
       <Form
         handleSubmit={register}
         name="register"
         imageProps={{
-          src:
-            "https://fallguys.com/_next/image?url=%2Fimages%2Fseason4%2Fpopstar-dlc%2Ffresh-hip.png&w=1920&q=75",
+          src: picture,
           alt: "fall-guys-popstar",
         }}
       >
@@ -79,7 +78,7 @@ const Register = () => {
             name="name"
             type="text"
             placeholder="John"
-            minlength="1"
+            minLength="1"
             required
             onChange={e => (formData.name = e.target.value)}
           />
@@ -92,7 +91,7 @@ const Register = () => {
             name="email"
             type="email"
             placeholder="email@email.com"
-            minlength="3"
+            minLength="3"
             required
             onChange={e => (formData.email = e.target.value)}
           />
@@ -104,7 +103,7 @@ const Register = () => {
             id="password"
             type="password"
             placeholder="password"
-            minlength="8"
+            minLength="8"
             required
             onChange={e => (formData.password = e.target.value)}
           />
