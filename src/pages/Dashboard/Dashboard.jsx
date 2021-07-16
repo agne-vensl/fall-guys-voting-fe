@@ -56,11 +56,13 @@ const Dashboard = () => {
       .then(data => {
         setNotification({ type: "success", message: data.data.message });
 
-        const updated = skins.find(skin => skin.id === id);
-        const newSkins = skins.filter(skin => skin.id !== id);
-        updated.score = parseInt(updated.score) + score;
-        updated.voted = 1;
-        setSkins(newSkins.concat([updated]).sort((a, b) => b.score - a.score));
+        const skinIndex = skins.findIndex(skin => skin.id === id);
+
+        skins[skinIndex].score = parseInt(skins[skinIndex].score) + score;
+        skins[skinIndex].voted = 1;
+
+        const sortedSkins = [...skins].sort((a, b) => b.score - a.score);
+        setSkins(sortedSkins);
       })
       .catch(err => {
         if (err.response) {
