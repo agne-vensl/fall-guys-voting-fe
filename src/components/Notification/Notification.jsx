@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import * as S from "./Notification.style";
 
 import successImg from "../../assets/notification-success.png";
-import errorImg from "../../assets/notification-success.png";
+import errorImg from "../../assets/notification-error.png";
 
 const images = {
   success: successImg,
