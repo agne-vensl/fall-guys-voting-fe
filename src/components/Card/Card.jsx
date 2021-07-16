@@ -4,8 +4,9 @@ import * as S from "./Card.style";
 import { FaThumbsUp, FaThumbsDown } from "react-icons/fa";
 
 import Button from "../button/Button";
+import Loading from "../Loading/Loading";
 
-const Card = ({ data, handleClicks }) => (
+const Card = ({ data, handleClicks, loadingId }) => (
   <S.Card>
     <S.ImageContainer>
       <S.Image src={data.image} alt={data.name} />
@@ -19,9 +20,13 @@ const Card = ({ data, handleClicks }) => (
 
       <S.Name>{data.name}</S.Name>
 
-      <div style={{ marginTop: "auto" }}>
-        <S.Score>{data.score || 0}</S.Score>
-      </div>
+      {data.id === loadingId ? (
+        <Loading margin="0" />
+      ) : (
+        <div style={{ marginTop: "auto" }}>
+          <S.Score>{data.score || 0}</S.Score>
+        </div>
+      )}
 
       {!data.voted ? (
         <S.SpaceBetween style={{ marginTop: "1rem" }}>
@@ -56,6 +61,11 @@ Card.propTypes = {
     name: PropTypes.string.isRequired,
     score: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
   }),
+  handleClicks: PropTypes.shape({
+    add: PropTypes.func.isRequired,
+    remove: PropTypes.func.isRequired,
+  }).isRequired,
+  loadingId: PropTypes.number,
 };
 
 Card.defaultProps = {
@@ -63,6 +73,7 @@ Card.defaultProps = {
     season: undefined,
     rarity: undefined,
     score: undefined,
+    loadingId: -1,
   },
 };
 

@@ -11,6 +11,7 @@ const Dashboard = () => {
   const [skins, setSkins] = useState([]);
   const [notification, setNotification] = useState({});
   const [loading, setLoading] = useState(false);
+  const [loadingSkin, setLoadingSkin] = useState(-1);
 
   useEffect(() => {
     const token = localStorage.getItem("token");
@@ -48,6 +49,8 @@ const Dashboard = () => {
   const updateScore = (id, score) => {
     const token = localStorage.getItem("token");
 
+    setLoadingSkin(id);
+
     axios
       .post(
         `${process.env.REACT_APP_BASE_URL}/content/add-score`,
@@ -70,6 +73,8 @@ const Dashboard = () => {
         setSkins(sortedSkins);
       })
       .catch(err => {
+        window.scrollTo(0, 0);
+
         if (err.response) {
           return setNotification({
             type: "error",
@@ -80,7 +85,8 @@ const Dashboard = () => {
           type: "error",
           message: "Cannot connect to server. Please try again later",
         });
-      });
+      })
+      .finally(() => setLoadingSkin(-1));
   };
 
   const addPoint = id => {
@@ -107,6 +113,7 @@ const Dashboard = () => {
         <CardsContainer
           data={skins}
           handleClicks={{ add: addPoint, remove: removePoint }}
+          loadingId={loadingSkin}
         />
       )}
     </>
