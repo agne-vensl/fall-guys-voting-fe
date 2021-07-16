@@ -19,7 +19,7 @@ export const Title = styled.h1`
   margin-top: -2.5rem;
   position: relative;
   text-align: center;
-  text-shadow: 0 0 0.7em #4fc1ff;
+  text-shadow: 0 0.015em 0.03em #3b3b3b, 0 0 0.7em #4fc1ff;
   text-transform: uppercase;
   transform: rotate(-10deg);
   width: fit-content;
