@@ -2,9 +2,11 @@ import React from "react";
 import PropTypes from "prop-types";
 import * as S from "./Button.style";
 
-const Button = ({ color, type, text, handleClick, ...props }) => (
+import Loading from "../Loading/Loading";
+
+const Button = ({ color, type, text, loading, handleClick, ...props }) => (
   <S.Button color={color} type={type} onClick={handleClick} {...props}>
-    {text}
+    {loading ? <Loading margin="0" size="1.3rem" /> : text}
   </S.Button>
 );
 
@@ -12,6 +14,7 @@ Button.propTypes = {
   color: PropTypes.oneOf(["primary", "secondary", "success"]),
   type: PropTypes.oneOf(["button", "submit", "reset"]),
   text: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
+  loading: PropTypes.bool,
   handleClick: PropTypes.func,
 };
 
@@ -19,6 +22,7 @@ Button.defaultProps = {
   color: "primary",
   type: "button",
   text: undefined,
+  loading: false,
   handleClick: undefined,
 };
 
