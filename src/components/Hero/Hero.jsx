@@ -7,15 +7,15 @@ import Logo from "../Logo/Logo";
 const Hero = ({ title }) => {
   return (
     <S.Hero>
-      <div className="container">
-        <Logo
-          src="https://fallguys.com/_next/image?url=%2Fimages%2Fseason4%2Flogo-desktop.png&w=1024&q=75"
-          alt="fall-guys-logo"
-          height="10rem"
-        />
-      </div>
+        <S.LogoContainer className="container">
+          <Logo
+            src="https://fallguys.com/_next/image?url=%2Fimages%2Fseason4%2Flogo-desktop.png&w=1024&q=75"
+            alt="fall-guys-logo"
+            height="10rem"
+          />
+        </S.LogoContainer>
 
-      <S.Title>{title}</S.Title>
+        <S.Title>{title}</S.Title>
     </S.Hero>
   );
 };
