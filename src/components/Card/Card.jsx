@@ -8,7 +8,7 @@ import Loading from "../Loading/Loading";
 
 const Card = ({ data, handleClicks, loadingId }) => (
   <S.Card>
-    <S.ImageContainer>
+    <S.ImageContainer rarity={data.rarity}>
       <S.Image src={data.image} alt={data.name} />
     </S.ImageContainer>
 
@@ -57,7 +57,13 @@ Card.propTypes = {
     id: PropTypes.number.isRequired,
     image: PropTypes.string.isRequired,
     season: PropTypes.string,
-    rarity: PropTypes.string,
+    rarity: PropTypes.oneOf([
+      "common",
+      "uncommon",
+      "rare",
+      "epic",
+      "legendary",
+    ]),
     name: PropTypes.string.isRequired,
     score: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
   }),

@@ -1,5 +1,28 @@
 import styled from "styled-components";
 
+const rarityColors = {
+  common: {
+    background: "#04cac1",
+    radial: "#00f7ec, #04cac1",
+  },
+  uncommon: {
+    background: "#164381",
+    radial: "#2BBAF8, #164381",
+  },
+  rare: {
+    background: "#11ad3b",
+    radial: "#11ad3b",
+  },
+  epic: {
+    background: "#bb17d6",
+    radial: "#bb17d6",
+  },
+  legendary: {
+    background: "#DE851D",
+    radial: "#DE851D",
+  },
+};
+
 export const Card = styled.div`
   display: flex;
   flex-direction: column;
@@ -24,8 +47,11 @@ export const SpaceBetween = styled.div`
 `;
 
 export const ImageContainer = styled.div`
-  background-color: #923cb5;
-  background: radial-gradient(#9e41c0, #2f0a3d 90%);
+  background-color: ${props => rarityColors[props.rarity].background};
+  background: radial-gradient(
+    #fff,
+    ${props => rarityColors[props.rarity].radial}
+  );
   border: 0.25em solid #fff;
   border-radius: 1.25em;
   display: flex;
@@ -52,9 +78,10 @@ export const DetailsContainer = styled.div`
 `;
 
 export const Rarity = styled.span`
-  color: red;
-  font-size: 0.7rem;
-  text-shadow: 0 0 0.2rem red;
+  color: #ff005a;
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-shadow: 0 0 0.15rem #ff005a;
   text-transform: uppercase;
 `;
 
