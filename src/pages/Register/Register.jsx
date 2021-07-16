@@ -6,7 +6,7 @@ import picture from "../../assets/register-page-picture.png";
 
 import Logo from "../../components/Logo/Logo";
 import Form from "../../components/Form/Form";
-import Button from "../../components/button/Button";
+import Button from "../../components/Button/Button";
 import StyledLink from "../../components/StyledLink/StyledLink";
 import Notification from "../../components/Notification/Notification";
 

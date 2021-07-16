@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import * as S from "./Card.style";
 import { FaThumbsUp, FaThumbsDown } from "react-icons/fa";
 
-import Button from "../button/Button";
+import Button from "../Button/Button";
 import Loading from "../Loading/Loading";
 
 const Card = ({ data, handleClicks, loadingId }) => (
