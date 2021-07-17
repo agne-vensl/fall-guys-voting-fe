@@ -27,7 +27,7 @@ const Loading = ({ size, margin, color }) => (
 Loading.propTypes = {
   size: PropTypes.string,
   margin: PropTypes.string,
-  color: PropTypes.oneOf(["primary", "inherit"]),
+  color: PropTypes.oneOf(["primary"]),
 };
 
 Loading.defaultProps = {
