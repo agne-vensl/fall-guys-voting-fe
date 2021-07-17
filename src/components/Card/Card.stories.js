@@ -4,6 +4,13 @@ import Card from "./Card";
 export default {
   title: "Components/Card",
   component: Card,
+  argTypes: {
+    handleClicks: {
+      table: {
+        disable: true,
+      },
+    },
+  },
 };
 
 const Template = args => <Card {...args} />;
@@ -17,5 +24,9 @@ PrimaryCard.args = {
     rarity: "epic",
     name: "Twit",
     score: 56,
+  },
+  handleClicks: {
+    add: () => {},
+    remove: () => {},
   },
 };

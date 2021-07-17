@@ -53,4 +53,8 @@ export const PrimaryCardsContainer = Template.bind({});
 PrimaryCardsContainer.args = {
   title: "Text here",
   data: data,
+  handleClicks: {
+    add: () => {},
+    remove: () => {},
+  },
 };
