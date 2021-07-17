@@ -14,7 +14,7 @@ PrimaryCard.args = {
     id: 1,
     image: "https://fallguys-skins.com/img/skins/s1/full/rare/xtwit.png",
     season: "Season 1",
-    rarity: "Epic",
+    rarity: "epic",
     name: "Twit",
     score: 56,
   },
