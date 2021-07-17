@@ -11,7 +11,7 @@ const Button = ({ color, type, text, loading, handleClick, ...props }) => (
 );
 
 Button.propTypes = {
-  color: PropTypes.oneOf(["primary", "secondary", "success"]),
+  color: PropTypes.oneOf(["primary", "secondary"]),
   type: PropTypes.oneOf(["button", "submit", "reset"]),
   text: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
   loading: PropTypes.bool,

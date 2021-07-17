@@ -2,9 +2,7 @@ import styled from "styled-components";
 
 const colors = {
   primary: "#fc86cd",
-  secondary: "#eee",
-  success: "#4fc1ff",
-  danger: "#a72020",
+  secondary: "#4fc1ff",
 };
 
 export const Button = styled.button`
