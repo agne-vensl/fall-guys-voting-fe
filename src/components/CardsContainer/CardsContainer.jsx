@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import * as S from "./CardsContainer.style";
 
-import Card from "../Card/Card";
+import { Card } from "../";
 
 const CardsContainer = ({ data, handleClicks, loadingId }) => (
   <S.CardsContainer>

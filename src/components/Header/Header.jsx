@@ -1,7 +1,7 @@
 import React from "react";
 import * as S from "./Header.style";
 
-import StyledLink from "../StyledLink/StyledLink";
+import { StyledLink } from "../";
 
 const Header = () => (
   <S.Header>
