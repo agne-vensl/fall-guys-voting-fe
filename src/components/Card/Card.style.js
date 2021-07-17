@@ -30,7 +30,7 @@ export const Card = styled.div`
   border-radius: 1.25em;
   box-shadow: rgb(0 0 0 / 22%) 0 0.625em 0.625em -0.5em;
   padding: 1rem;
-  width: 14.5rem;
+  width: 15rem;
   transition: transform 0.2s ease-in-out;
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
