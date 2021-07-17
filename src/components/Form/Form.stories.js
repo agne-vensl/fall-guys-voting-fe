@@ -1,6 +1,8 @@
 import React from "react";
-import Form from "./Form";
-import Button from "../button/Button";
+
+import { Form, Button } from "../../components";
+
+import image from "../../assets/login-page-picture.png";
 
 export default {
   title: "Components/Form",
@@ -26,4 +28,5 @@ const Template = args => (
 export const PrimaryForm = Template.bind({});
 PrimaryForm.args = {
   name: "story-form",
+  imageProps: { src: image, alt: "image" },
 };
