@@ -30,7 +30,7 @@ const Card = ({ data, handleClicks, loadingId }) => (
       {!data.voted ? (
         <S.SpaceBetween style={{ marginTop: "1rem" }}>
           <Button
-            color="success"
+            color="secondary"
             text={<FaThumbsUp />}
             handleClick={() => {
               handleClicks?.add(data.id);
