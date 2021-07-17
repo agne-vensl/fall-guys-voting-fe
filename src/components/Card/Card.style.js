@@ -59,8 +59,9 @@ export const ImageContainer = styled.div`
   align-items: flex-start;
   justify-content: center;
   height: 12.5em;
-  width: 12.5em;
   margin: 0 auto;
+  padding: 0.75rem;
+  width: 12.5em;
 `;
 
 export const Image = styled.img`
@@ -68,7 +69,6 @@ export const Image = styled.img`
   width: 100%;
   object-fit: cover;
   object-position: center;
-  padding: 0.75rem;
 `;
 
 export const DetailsContainer = styled.div`
