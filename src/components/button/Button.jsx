@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import * as S from "./Button.style";
 
-import Loading from "../Loading/Loading";
+import { Loading } from "../";
 
 const Button = ({ color, type, text, loading, handleClick, ...props }) => (
   <S.Button color={color} type={type} onClick={handleClick} {...props}>
