@@ -1,5 +1,5 @@
 export { default as AnonRoute } from "./AnonRoute/AnonRoute";
-export { default as Button } from "./Button/Button";
+export { default as Button } from "./button/Button";
 export { default as Card } from "./Card/Card";
 export { default as CardsContainer } from "./CardsContainer/CardsContainer";
 export { default as Form } from "./Form/Form";
