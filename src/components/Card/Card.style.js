@@ -47,10 +47,11 @@ export const SpaceBetween = styled.div`
 `;
 
 export const ImageContainer = styled.div`
-  background-color: ${props => rarityColors[props.rarity].background};
+  background-color: ${props =>
+    rarityColors[props.rarity.toLowerCase()].background};
   background: radial-gradient(
     #fff,
-    ${props => rarityColors[props.rarity].radial}
+    ${props => rarityColors[props.rarity.toLowerCase()].radial}
   );
   border: 0.25em solid #fff;
   border-radius: 1.25em;
