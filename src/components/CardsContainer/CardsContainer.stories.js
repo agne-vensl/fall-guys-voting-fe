@@ -4,6 +4,13 @@ import CardsContainer from "./CardsContainer";
 export default {
   title: "Components/CardsContainer",
   component: CardsContainer,
+  argTypes: {
+    handleClicks: {
+      table: {
+        disable: true,
+      },
+    },
+  },
 };
 
 const data = [
@@ -41,4 +48,9 @@ const data = [
   },
 ];
 
-export const PrimaryCardsContainer = () => <CardsContainer data={data} />;
+const Template = args => <CardsContainer {...args} />;
+export const PrimaryCardsContainer = Template.bind({});
+PrimaryCardsContainer.args = {
+  title: "Text here",
+  data: data,
+};
