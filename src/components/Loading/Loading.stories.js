@@ -20,4 +20,6 @@ const Template = args => (
 export const Primary = Template.bind({});
 Primary.args = {
   color: "primary",
+  size: "3rem",
+  margin: "3rem",
 };
