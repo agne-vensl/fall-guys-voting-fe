@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 
-import Hero from "../../components/Hero/Hero";
-import CardsContainer from "../../components/CardsContainer/CardsContainer";
-import Notification from "../../components/Notification/Notification";
-import Header from "../../components/Header/Header";
-import Loading from "../../components/Loading/Loading";
+import {
+  Hero,
+  CardsContainer,
+  Notification,
+  Header,
+  Loading,
+} from "../../components";
 
 const Dashboard = () => {
   const [skins, setSkins] = useState([]);

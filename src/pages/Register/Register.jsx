@@ -4,11 +4,13 @@ import axios from "axios";
 import logo from "../../assets/logo-desktop.png";
 import picture from "../../assets/register-page-picture.png";
 
-import Logo from "../../components/Logo/Logo";
-import Form from "../../components/Form/Form";
-import Button from "../../components/Button/Button";
-import StyledLink from "../../components/StyledLink/StyledLink";
-import Notification from "../../components/Notification/Notification";
+import {
+  Logo,
+  Form,
+  Button,
+  StyledLink,
+  Notification,
+} from "../../components/";
 
 const Register = () => {
   const [formData] = useState({ name: "", email: "", password: "" });
