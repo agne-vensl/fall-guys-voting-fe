@@ -33,14 +33,14 @@ const Card = ({ data, handleClicks, loadingId }) => (
             color="success"
             text={<FaThumbsUp />}
             handleClick={() => {
-              handleClicks.add(data.id);
+              handleClicks?.add(data.id);
             }}
           />
           <Button
             color="primary"
             text={<FaThumbsDown />}
             handleClick={() => {
-              handleClicks.remove(data.id);
+              handleClicks?.remove(data.id);
             }}
           />
         </S.SpaceBetween>
