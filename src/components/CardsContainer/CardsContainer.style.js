@@ -8,13 +8,12 @@ export const CardsContainer = styled.div`
     margin-bottom: 2rem;
   }
 
-  @media only screen and (min-width: 768px) {
+  @media only screen and (min-width: 580px) {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 
     & > * {
-      margin-top: 0;
       margin-left: 0.5rem;
       margin-right: 0.5rem;
     }
