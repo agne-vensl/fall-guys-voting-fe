@@ -106,16 +106,18 @@ const Dashboard = () => {
           notification={notification}
           handleDelete={setNotification}
         />
+
+        {loading ? (
+          <Loading color="primary" />
+        ) : (
+          <CardsContainer
+            data={skins}
+            title="Vote for your favourite skins!"
+            handleClicks={{ add: addPoint, remove: removePoint }}
+            loadingId={loadingSkin}
+          />
+        )}
       </div>
-      {loading ? (
-        <Loading color="primary" />
-      ) : (
-        <CardsContainer
-          data={skins}
-          handleClicks={{ add: addPoint, remove: removePoint }}
-          loadingId={loadingSkin}
-        />
-      )}
     </>
   );
 };

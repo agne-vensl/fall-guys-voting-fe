@@ -4,9 +4,11 @@ import * as S from "./CardsContainer.style";
 
 import { Card } from "../";
 
-const CardsContainer = ({ data, handleClicks, loadingId }) => (
-  <S.CardsContainer>
-    <div className="container">
+const CardsContainer = ({ data, title, handleClicks, loadingId }) => (
+  <>
+    {data && data.length > 0 && <S.Title>{title}</S.Title>}
+
+    <S.CardsContainer>
       {data && data.length ? (
         data.map(item => {
           return (
@@ -21,12 +23,13 @@ const CardsContainer = ({ data, handleClicks, loadingId }) => (
       ) : (
         <S.NoResults>No results</S.NoResults>
       )}
-    </div>
-  </S.CardsContainer>
+    </S.CardsContainer>
+  </>
 );
 
 CardsContainer.propTypes = {
   data: PropTypes.array.isRequired,
+  title: PropTypes.string,
   handleClicks: PropTypes.shape({
     add: PropTypes.func.isRequired,
     remove: PropTypes.func.isRequired,
@@ -35,6 +38,7 @@ CardsContainer.propTypes = {
 };
 
 CardsContainer.defaultProps = {
+  title: undefined,
   loadingId: -1,
 };
 
