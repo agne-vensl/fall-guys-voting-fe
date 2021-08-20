@@ -1,3 +1,12 @@
+# Vote For Your Favourite Fall Guys Skins :crown:
+
+A simple React project that lets users register, login and vote for their favourite Fall Guys: Ultimate Knockout skins.
+
+Run `npm install` and then `npm start` while in project directory to start the app in development mode.
+
+
+You can find server-side code and potential database structure here: [Fall Guys Voting BackEnd](https://github.com/agne-vensl/fall-guys-voting-be)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
